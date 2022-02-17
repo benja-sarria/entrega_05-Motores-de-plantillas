@@ -9,7 +9,7 @@
 
         <title>Products</title>
     </head>
-    <body>
+    <body class="container col-10 col-md-8 col-lg-6 p-5">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -31,9 +31,9 @@
                     data-bs-parent="#accordionFlushExample"
                 >
                     <div class="accordion-body">
-                        <div class="container col-xl-4 col-lg-6 col-md-8 col-10">
+                        <div class="container col-xl-8 col-lg-12 col-md-10 col-10">
 
-                            <form action="/api/products" method="post">
+                            <form action="/api/products" method="post" class="col-12 col-md-10 col-lg-12">
                                 <div class="mb-3">
                                   <label for="nombre" class="form-label lead">Nombre del Producto</label>
                                   <input  type="text"
@@ -69,6 +69,47 @@
                         </div>
 
                      
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseFive"
+                    >
+                       <h4>VER TODOS LOS PRODUCTOS</h4>  
+                    </button>
+                </h2>
+                <div
+                    id="flush-collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample"
+                >
+                    <div class="accordion-body">
+                        <form action="/api/products" method="get">
+                            <div style="margin-bottom: 16px">
+                                <div
+                                    style="
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    "
+                                >
+                                    <input
+                                        type="submit"
+                                        id="getAllProducts"
+                                        value="Ver Productos"
+                                        class="submit-button btn btn-success"
+                                    />
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -131,47 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFive">
-                    <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFive"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFive"
-                    >
-                        Buscar todos los productos
-                    </button>
-                </h2>
-                <div
-                    id="flush-collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFive"
-                    data-bs-parent="#accordionFlushExample"
-                >
-                    <div class="accordion-body">
-                        <form action="/api/products" method="get">
-                            <div style="margin-bottom: 16px">
-                                <div
-                                    style="
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                    "
-                                >
-                                    <input
-                                        type="submit"
-                                        id="getAllProducts"
-                                        value="Buscar Producto"
-                                        class="submit-button"
-                                    />
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
             <div class="accordion-item" style="border-bottom: 1px solid rgba(133, 133, 133, 0.233);">
                 <h2 class="accordion-header" id="flush-headingSix">
                     <button
