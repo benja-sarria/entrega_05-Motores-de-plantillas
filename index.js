@@ -8,7 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Templates Engine
-app.engine(
+// HANDLEBARS
+/* app.engine(
     "hbs",
     engine({
         // la extensión de los archivos
@@ -21,7 +22,11 @@ app.engine(
     })
 );
 app.set("views", "./views");
-app.set("views engine", "hbs");
+app.set("views engine", "hbs"); */
+
+// PUG
+app.set("views", "./views/pug");
+app.set("view engine", "pug");
 
 app.use(express.static("public"));
 

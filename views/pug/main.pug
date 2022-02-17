@@ -1,0 +1,25 @@
+//- para usarlo como bloque
+extends ./layout
+
+block main
+    div(class="container")
+        if formattedProducts.length > 0
+            div(class="bg-light container ms-3")
+                h1(class="fw-500 fs-2 p-4") Todos nuestros productos
+            div(class="bg-light p-5 rounded-lg m-3 container table-responsive")
+                table(class="table table-hover")
+                    tr
+                        th(class="fs-4") Producto
+                        th(class="fs-4") Precio
+                        th(class="fs-4") Imagen
+                    each val in formattedProducts
+                        tr
+                            td=val.title
+                            td=val.price
+                            td
+                                img(src=val.thumbnail alt=val.id)
+        else 
+            div(class="container ms-3 alert-warning d-flex justify-content-center mt-5")
+                h1(class="fw-500 fs-2 p-4 warning") No hay productos disponibles
+
+
