@@ -25,8 +25,12 @@ app.set("views", "./views");
 app.set("views engine", "hbs"); */
 
 // PUG
-app.set("views", "./views/pug");
-app.set("view engine", "pug");
+/* app.set("views", "./views/pug");
+app.set("view engine", "pug"); */
+
+// EJS
+app.set("views", "./views/ejs");
+app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
