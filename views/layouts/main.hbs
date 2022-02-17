@@ -1,0 +1,36 @@
+{{{customstyle}}}
+<div class="container">
+
+    <div class="bg-light container ms-3">
+
+        <h1 class="fw-500 fs-2 p-4">Todos nuestros productos</h1>
+    </div>
+    <div class="bg-light p-5 rounded-lg m-3 container table-responsive">
+        <table class="table table-hover">
+            <tr class="">
+                <th class="fs-4">
+                    Producto
+                </th>
+                <th class="fs-4">
+                    Precio
+                </th>
+                <th class="fs-4">
+                    Imagen
+                </th>
+            </tr>
+            {{#each formattedProducts}}
+                <tr>
+                    <td>
+                        {{this.title}}
+                    </td>
+                    <td>
+                        {{this.price}}
+                    </td>
+                    <td>
+                        <img src={{this.thumbnail}} alt={{this.id}} />
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>
