@@ -4,5 +4,10 @@ body .accordion .accordion-item .accordion-collapse .accordion-body .container f
 body .accordion .accordion-item .accordion-collapse .accordion-body .container form .mb-3 .small {
   opacity: 0.5;
 }
+body .btn-container {
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+}
 
 /*# sourceMappingURL=styles.css.map */
