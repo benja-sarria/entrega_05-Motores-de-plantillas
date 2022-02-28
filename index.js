@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 // Templates Engine
 // HANDLEBARS
-/* app.engine(
+app.engine(
     "hbs",
     engine({
         // la extensión de los archivos
@@ -22,15 +22,9 @@ const PORT = process.env.PORT || 8080;
     })
 );
 app.set("views", "./views");
-app.set("views engine", "hbs"); */
+app.set("views engine", "hbs"); 
 
-// PUG
-/* app.set("views", "./views/pug");
-app.set("view engine", "pug"); */
 
-// EJS
-app.set("views", "./views/ejs");
-app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
